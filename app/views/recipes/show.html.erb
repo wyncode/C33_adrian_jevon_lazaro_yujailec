@@ -2,13 +2,14 @@
 
 
 
-<body>
+
   <div class="recipe-page-div">
+      
     <div class="top">
-    
-    </div>
       <h3 class="recipe-name"><%= @recipe.name %></h3>
-      <p class="cook-time">Cook TIme <%= @recipe.cook_time %> min</p>
+      <p class="cook-time">Cook Time <%= @recipe.cook_time %> min</p>
+    </div>
+
       <iframe class="recipe-video"  width="75%" 
         height="500" 
         src="https://www.youtube.com/embed/zGcYabz3hYg" 
@@ -22,25 +23,24 @@
           control><% @recipe.video_url %></iframe>
         
       
-      
-      <p class="recipe-serving">Servings <%= @recipe.servings %></p>
-      <p class="recipe-difficulty">Difficulty <%= @recipe.difficulty %></p>
-      
+      <div class="recipe-attributes">
+        <p class="recipe-serving">Servings <%= @recipe.servings %></p>
+        <p class="recipe-difficulty">Difficulty <%= @recipe.difficulty %></p>
+      </div>
+
       <ul class="intangibles">
         <li class="recipe-calories">Calories <%= @recipe.calories %>g</li>
         <li class="recipe-carbs">Carbs <%= @recipe.carbs %>g</li>
         <li class="recipe-protein">Protein <%= @recipe.protein %>g</li>
       </ul>
       
-      <p class="ingredients">Ingredients<%= @has_rich_text %></p>
-      <p><%= @recipe.recipe_details %></p>
+      <div class="ingredients">
+        <h3>Ingredients<%= @has_rich_text %></h3>
+        <p><%= @recipe.recipe_details %></p>
+      </div>
+      
 
+        <button rating>Rate This Recipe</button>
       
-    <form> 
-      <input type="form">
-      </form>
-      <input type="text" name="email" class="email-input">
-        <button Comment>Comment</button>
-      
-    <div></div>
+   
   </div>

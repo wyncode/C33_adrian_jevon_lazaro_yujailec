@@ -37,9 +37,29 @@
   text-align: center;
 }
 
+.top{
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-between;
+}
+
 .intangibles{
+  justify-content: space-between;
+  font-size: 2rem;
   list-style: none;
-  display: inline;
+  display: flex;
+}
+
+.ingredients{
+  background-color: green;
+  padding: 25%;
+  text-align: left;
+}
+
+.recipe-attributes{
+  justify-content: space-between;
+  font-size: 2rem;
+  display: flex;
 }
 
 button:before{
