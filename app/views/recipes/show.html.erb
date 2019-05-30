@@ -1,8 +1,46 @@
-<h1><%= @recipe.name %></h1>
 
-<%= render 'recipe_table', recipes: [@recipe] %>
 
-<p>
-  Recipe Details
-  <%= @recipe.recipe_details %>
-</p>
+
+
+<body>
+  <div class="recipe-page-div">
+    <div class="top">
+    
+    </div>
+      <h3 class="recipe-name"><%= @recipe.name %></h3>
+      <p class="cook-time">Cook TIme <%= @recipe.cook_time %> min</p>
+      <iframe class="recipe-video"  width="75%" 
+        height="500" 
+        src="https://www.youtube.com/embed/zGcYabz3hYg" 
+        frameborder="0" 
+        allow="accelerometer; a
+        utoplay; encrypted-media; 
+        gyroscope; 
+        picture-in-picture" 
+        allowfullscreen>
+        class="recpie-page-video width="90%" text-align="center"
+          control><% @recipe.video_url %></iframe>
+        
+      
+      
+      <p class="recipe-serving">Servings <%= @recipe.servings %></p>
+      <p class="recipe-difficulty">Difficulty <%= @recipe.difficulty %></p>
+      
+      <ul class="intangibles">
+        <li class="recipe-calories">Calories <%= @recipe.calories %>g</li>
+        <li class="recipe-carbs">Carbs <%= @recipe.carbs %>g</li>
+        <li class="recipe-protein">Protein <%= @recipe.protein %>g</li>
+      </ul>
+      
+      <p class="ingredients">Ingredients<%= @has_rich_text %></p>
+      <p><%= @recipe.recipe_details %></p>
+
+      
+    <form> 
+      <input type="form">
+      </form>
+      <input type="text" name="email" class="email-input">
+        <button Comment>Comment</button>
+      
+    <div></div>
+  </div>
