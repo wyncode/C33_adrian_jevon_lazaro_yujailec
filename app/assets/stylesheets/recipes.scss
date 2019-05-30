@@ -16,7 +16,6 @@
   height: 50px;
 }
 
-<<<<<<< HEAD
 .recipe_image{
   object-fit: cover;
   width: 100px;
@@ -29,7 +28,6 @@
   width: 100px;
   height: 100px;
 }
-=======
 
 .recipe-page-div{
   padding: 10%;
@@ -68,6 +66,7 @@ button:before{
   display:inline-block;
   vertical-align:middle;
 }
+
 button{
   background:#1AAB8A;
   color:#fff;
@@ -81,10 +80,12 @@ button{
   outline:none;
   border-radius: 55%;
 }
+
 button:hover{
   background:#fff;
   color:#1AAB8A;
 }
+
 button:before,button:after{
   content:'';
   position:absolute;
@@ -95,14 +96,15 @@ button:before,button:after{
   background: #1AAB8A;
   transition:400ms ease all;
 }
+
 button:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
+
 button:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
->>>>>>> changes to show page and recipes.scss
