@@ -1,15 +1,25 @@
 
 
-
-
+<div class="topnav">
+<a class="active" href="#home"> MealFly  Home</a>
+<a href="#about">Cookbook</a>
+<a href="#contact">Grocery List</a>
+<input type="text" placeholder="Search..">
+<img class="profile-pic" src="#" alt="profile-img">
+</div>
 
   <div class="recipe-page-div">
       
     <div class="top">
       <h3 class="recipe-name"><%= @recipe.name %></h3>
-      <p class="cook-time">Cook Time <%= @recipe.cook_time %> min</p>
+        <% @recipe.categories.each do |category| %>
+      <h3 class="recipe-category">
+        <%= category.name %>
+      </h3>
+      <% end %>
     </div>
 
+    <div>
       <iframe class="recipe-video"  width="75%" 
         height="500" 
         src="https://www.youtube.com/embed/zGcYabz3hYg" 
@@ -20,27 +30,60 @@
         picture-in-picture" 
         allowfullscreen>
         class="recpie-page-video width="90%" text-align="center"
-          control><% @recipe.video_url %></iframe>
-        
+        control><% @recipe.video_url %>
+      </iframe>
+    </div>
       
       <div class="recipe-attributes">
+        <p class="cook-time">Cook Time <%= @recipe.cook_time %> min</p>
         <p class="recipe-serving">Servings <%= @recipe.servings %></p>
         <p class="recipe-difficulty">Difficulty <%= @recipe.difficulty %></p>
       </div>
 
+    <div>
       <ul class="intangibles">
         <li class="recipe-calories">Calories <%= @recipe.calories %>g</li>
         <li class="recipe-carbs">Carbs <%= @recipe.carbs %>g</li>
         <li class="recipe-protein">Protein <%= @recipe.protein %>g</li>
+        <li class="recipe-fat">Fat <%= @recipe.fat %>g</li>
+        <li class="recipe-sugar">Sugar <%= @recipe.sugar %>g</li>
       </ul>
-      
-      <div class="ingredients">
+    </div>
+      <div>
         <h3>Ingredients<%= @has_rich_text %></h3>
         <p><%= @recipe.recipe_details %></p>
+        <ul class="ingredients">
+          <li>	Butter </li>
+          <li>	Eggs </li>
+          <li>  Salt </li> 
+          <li>  Pepper</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Instructions</h2>
+          <ol class="instructions">
+            <li>For Over-Easy or Over-Hard Eggs: HEAT 2 tsp. butter in nonstick skillet over medium-high heat until hot.</li>
+            <li>BREAK eggs and SLIP into pan, 1 at a time. IMMEDIATELY reduce heat to low.</li>
+          </ol>
       </div>
       
+      <div>
+        <button class="cool-looking-button" rating>Rate This Recipe</button>
+      </div>
 
-        <button rating>Rate This Recipe</button>
-      
-   
+        <div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+        </div> 
+      <div>
+        <button class="cool-looking-button">Show More</button>
+      </div>
+        <div>
+          <input class="comment-input" type="textarea" placeholder="Leave a comment">
+        </div>
+      <div>
+        <button class="cool-looking-button">Publish</button>
+      </div>
   </div>
