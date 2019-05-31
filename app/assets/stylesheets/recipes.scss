@@ -23,41 +23,58 @@
   border-radius: 100%;
 }
 
-.recipe_video{
+.video{
   object-fit: cover;
-  width: 100px;
-  height: 100px;
-}
-
-.recipe-page-div{
-  padding: 10%;
-  background-color: orange;
+  /*width: 100px;
+  height: 100px;*/
   text-align: center;
 }
 
-.top{
-  display: flex;
-  font-size: 3rem;
-  justify-content: space-between;
+.recipe-page-div{
+  padding: 10px;
+  /*background-color: orange;
+  text-align: center;*/
 }
 
-.intangibles{
+.top {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  font-size: 2rem;
+
+}
+
+.recipe-name {
+  font-weight: bold;
+}
+
+.serving-size {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.nutrition li{
+  display: inline;
   list-style: none;
-  display: flex;
+  font-size: 16px;
+
 }
 
-.ingredients{
-  background-color: green;
-  padding: 25%;
+.instructions{
+  background-color: rgb(182, 181, 181);
+  padding: 10px;
   text-align: left;
 }
 
 .recipe-attributes{
-  justify-content: space-between;
-  font-size: 2rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+.cook-time {
+  font-size: 20px;
 }
 
 button:before{
@@ -75,6 +92,7 @@ button{
   height:60px;
   font-size:1.6em;
   padding:0 2em;
+  margin-top: 10px;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
