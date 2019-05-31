@@ -30,14 +30,49 @@
   text-align: center;
 }
 
+.topnav{
+  overflow: hidden;
+  background-color: grey;
+}
+
+.topnav a{
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 14px 16px;
+  color: black;
+}
+
+.topnav input[type=text]{
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 40%;
+}
+
+.profile-pic{
+  padding-top: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 .recipe-page-div{
+<<<<<<< HEAD
   padding: 10px;
   /*background-color: orange;
   text-align: center;*/
+=======
+  padding: 5%;
+  text-align: center;
+>>>>>>> 1e172abb7ff72d04076a15db8bf736a50484dce4
 }
 
 .top {
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   justify-content: space-between;
 
@@ -62,11 +97,41 @@
 .instructions{
   background-color: rgb(182, 181, 181);
   padding: 10px;
+=======
+  font-size: 2rem;
+  justify-content: space-between;
+  padding: 5rem;
+  margin: 2rem;
+}
+
+.intangibles {
+  padding: 5rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  display: flex; 
+  margin: 1rem;
+}
+
+.ingredients{
+  list-style-type: none;
   text-align: left;
+  font-size: 1.5rem;
+}
+
+.instruction{
+  background-color: grey;
+>>>>>>> 1e172abb7ff72d04076a15db8bf736a50484dce4
+  text-align: left;
+  list-style-type: none;
+  padding: 1.5rem;
+  height: 4rem;
+  width: max-content;
+  
 }
 
 .recipe-attributes{
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -75,17 +140,20 @@
 
 .cook-time {
   font-size: 20px;
+=======
+  padding: 1rem;
+>>>>>>> 1e172abb7ff72d04076a15db8bf736a50484dce4
 }
 
-button:before{
+.cool-looking-button:before{
   content:'';
   height:100%;
   display:inline-block;
   vertical-align:middle;
 }
 
-button{
-  background:#1AAB8A;
+.cool-looking-button{
+  background:grey;
   color:#fff;
   border:none;
   position:relative;
@@ -99,30 +167,46 @@ button{
   border-radius: 55%;
 }
 
-button:hover{
+.cool-looking-button:hover{
   background:#fff;
   color:#1AAB8A;
 }
 
-button:before,button:after{
+.cool-looking-button:before,button:after{
   content:'';
   position:absolute;
   top:0;
   right:0;
   height:2px;
   width:0;
-  background: #1AAB8A;
+  background: grey;
   transition:400ms ease all;
 }
 
-button:after{
+.cool-looking-button:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
 
-button:hover:before,button:hover:after{
+.cool-looking-button:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+.block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  justify-content: space-between; 
+  background-color: grey;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.comment-input {
+  height: 3rem;
+  width: 5rem;
+  padding: 1rem;
 }
