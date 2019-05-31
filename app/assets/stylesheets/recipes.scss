@@ -59,19 +59,24 @@
 }
 
 .recipe-page-div{
-  padding: 5%;
+  padding: 5rem;
   text-align: center;
 }
 
 .top {
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif, 40, reg;
   display: flex;
   font-size: 2rem;
   justify-content: space-between;
-  padding: 5rem;
+  padding: 3rem;
   margin: 2rem;
+  
 }
 
 .intangibles {
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif, 40, reg;
   padding: 5rem;
   justify-content: space-between;
   font-size: 1.5rem;
@@ -80,19 +85,23 @@
 }
 
 .ingredients{
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif, 40, reg;
   list-style-type: none;
   text-align: left;
   font-size: 1.5rem;
 }
 
 .instruction{
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif, 40, reg;
   background-color: grey;
   text-align: left;
   list-style-type: none;
   padding: 1.5rem;
   height: 4rem;
   width: max-content;
-  
+  margin: 2rem;
 }
 
 .recipe-attributes{
