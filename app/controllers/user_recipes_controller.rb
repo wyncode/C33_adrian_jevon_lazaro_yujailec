@@ -6,12 +6,14 @@ class UserRecipesController < ApplicationController
   end
 
   def create
-    @user_recipe = current_user.user_recipes.new(recipe_id: params[:recipe_id])
-    if @user_recipe.save
-      flash[:notice] = "Recipe was successfully added to Cookbook"
-    else
-      flash[:alert] = "Recipe already in your Cookbook."
-    end
+    id = params[:user_recipe][:id]
+    @user_recipe = current_user.user_recipes.new(recipe_id: id)
+    @user_recipe.save
+    # if @user_recipe.save
+    #   flash[:notice] = "Recipe was successfully added to Cookbook"
+    # else
+    #   flash[:alert] = "Recipe already in your Cookbook."
+    # end
     redirect_back fallback_location: root_path
   end
 
