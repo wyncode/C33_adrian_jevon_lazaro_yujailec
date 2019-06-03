@@ -95,7 +95,6 @@ ActiveRecord::Schema.define(version: 2019_06_03_022747) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "cook_time"
     t.string "video_url"
-    t.integer "fieldname"
     t.integer "ratings_sum"
     t.integer "ratings_total"
   end

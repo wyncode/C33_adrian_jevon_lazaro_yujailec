@@ -2,15 +2,40 @@
 
 <p>
   Overall User Rating :
-  <%= @recipe.ratings_sum / @recipe.ratings_total %> / 5
+  <% if @recipe.ratings_sum == nil %>
+    No reviews posted, be the first!
+  <% else %>
+    <% case @recipe.ratings_sum / @recipe.ratings_total %>
+      <% when  1 %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  2 %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  3 %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  4 %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>
+      <% when  5 %>
+      <span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked">
+    <% end %>
+  <% end %>
 </p>
-
-
 
 <p>
  Your Rating : 
+ <%p  @recipe.ratings.find_by(user_id: current_user.id, recipe_id: @recipe.id)%>
  <% if @recipe.ratings.find_by(user_id: current_user.id, recipe_id: @recipe.id).present? %>
-  <%= @recipe.ratings.find_by(user_id: current_user.id, recipe_id: @recipe.id).score %> / 5
+  <% case @recipe.ratings.find_by(user_id: current_user.id, recipe_id: @recipe.id).score%>
+      <% when  "1" %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  "2" %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  "3" %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+      <% when  "4" %>
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>
+      <% when  "5" %>
+      <span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked"><span class="fa fa-star checked">
+      <% end %>
  <% else %>
   Rate this recipe below!
 <% end %>
